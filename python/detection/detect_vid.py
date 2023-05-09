@@ -20,7 +20,7 @@ model = cv2.dnn.readNet(model='input/frozen_inference_graph.pb',
 
 # capture the video
 #cap = cv2.VideoCapture('../../input/video_2.mov')
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(-1)
 #cap = VideoStream(usePiCamera=False).start()
 time.sleep(2.0)
 # get the video frames' width and height for proper saving of videos
