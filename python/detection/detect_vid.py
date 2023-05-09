@@ -11,8 +11,8 @@ with open('../../input/object_detection_classes_coco.txt', 'r') as f:   #object_
 COLORS = np.random.uniform(100, 255, size=(len(class_names), 3)) #0,255
 
 # load the DNN model
-model = cv2.dnn.readNet(model='../../input/frozen_inference_graph.pb',
-                        config='../../input/ssd_mobilenet_v2_coco_2018_03_29.pbtxt.txt', 
+model = cv2.dnn.readNet(model='input/frozen_inference_graph.pb',
+                        config='input/ssd_mobilenet_v2_coco_2018_03_29.pbtxt.txt', 
                         framework='TensorFlow')
 
 # capture the video
