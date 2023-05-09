@@ -4,7 +4,7 @@ import numpy as np
 import argparse
 
 # load the COCO class names
-with open('../../input/object_detection_classes_coco.txt', 'r') as f:   #object_detection_classes_coco.txt
+with open('input/object_detection_classes_coco.txt', 'r') as f:   #object_detection_classes_coco.txt
     class_names = f.read().split('\n')
 
 # get a different color array for each of the classes
@@ -22,7 +22,7 @@ cap = cv2.VideoCapture(0)
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 # create the `VideoWriter()` object
-out = cv2.VideoWriter('../../outputs/video_result.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, 
+out = cv2.VideoWriter('outputs/video_result.mp4', cv2.VideoWriter_fourcc(*'mp4v'), 30, 
                       (frame_width, frame_height))
 
 # set up argparse for type of object to detect
