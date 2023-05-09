@@ -38,7 +38,8 @@ args = vars(ap.parse_args())
 
 # detect objects in each frame of the video
 while cap.isOpened():
-    ret, frame = cap.read()
+    frame = cap.read()
+    frame = imutils.resize(frame, width=1000)
     if ret:
         image = frame
         image_height, image_width, _ = image.shape
